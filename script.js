@@ -9,10 +9,7 @@ const messages = [
 ];
 
 button.addEventListener("click", function () {
-  const messageContainer = document.createElement("div");
-  const randomIndex = Math.floor(Math.random() * messages.length);
+  const messageContainer = document.getElementById("messageContainer");
+  const randomIndex = Math.floor(Date.now() % messages.length);
   messageContainer.textContent = messages[randomIndex];
-  messageContainer.classList.add("message");
-  const container = document.querySelector(".container");
-  container.appendChild(messageContainer);
 });
