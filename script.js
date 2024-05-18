@@ -10,6 +10,6 @@ const messages = [
 
 button.addEventListener("click", function () {
   const messageContainer = document.getElementById("messageContainer");
-  const randomIndex = Math.floor(Date.now() % messages.length);
+  const randomIndex = Math.floor(Math.random() * messages.length);
   messageContainer.textContent = messages[randomIndex];
 });
